@@ -1,4 +1,3 @@
-
 var triple = function(x) {
   return x * 3;
 }
@@ -8,12 +7,26 @@ console.log("Triple of 30 = ", tripleVar(30))
 
 ///FILTER
 
-var animals =[
-  { name: 'Johnny', species: 'dog'},
-  { name: 'Miki', species: 'rabbit'},
-  { name: 'Tiky', species: 'dog'},
-  { name: 'Goldy', species: 'fish'},
-  { name: 'Jimmy', species: 'cat'}
+var animals = [{
+    name: 'Johnny',
+    species: 'dog'
+  },
+  {
+    name: 'Miki',
+    species: 'rabbit'
+  },
+  {
+    name: 'Tiky',
+    species: 'dog'
+  },
+  {
+    name: 'Goldy',
+    species: 'fish'
+  },
+  {
+    name: 'Jimmy',
+    species: 'cat'
+  }
 ]
 
 var dogs = animals.filter(function(animal) {
@@ -22,8 +35,8 @@ var dogs = animals.filter(function(animal) {
 console.log("Dogs, using filter = ", dogs)
 
 var dogsLoop = []
-for(var i = 0; i < animals.length; i++) {
-  if(animals[i].species === 'dog')
+for (var i = 0; i < animals.length; i++) {
+  if (animals[i].species === 'dog')
     dogsLoop.push(animals[i])
 }
 console.log("Dogs, using loop = ", dogsLoop);
@@ -36,7 +49,7 @@ var animalNames = animals.map(function(animal) {
 console.log("Animal names using map = ", animalNames)
 
 var animalNamesLoop = []
-for(var i = 0; i < animals.length; i++) {
+for (var i = 0; i < animals.length; i++) {
   animalNamesLoop.push(animals[i].name)
 }
 console.log("Animal names using loop = ", animalNamesLoop)
@@ -46,21 +59,31 @@ console.log("Arrow function", names)
 
 //REDUCE
 
-var orders = [
-  { amount: 100 },
-  {amount: 150 },
-  {amount: 250 },
-  {amount: 350 },
-  {amount: 475 }
+var orders = [{
+    amount: 100
+  },
+  {
+    amount: 150
+  },
+  {
+    amount: 250
+  },
+  {
+    amount: 350
+  },
+  {
+    amount: 475
+  }
 ]
 
 var total = 0;
-for(var i = 0; i < orders.length; i++) {
+for (var i = 0; i < orders.length; i++) {
   total += orders[i].amount;
 }
 console.log("Total with loop = ", total)
 
 var totalAmount = orders.reduce(function(sum, order) {
+  console.log(sum, order)
   return sum += order.amount
 }, 0)
 console.log("Total with reduce = ", totalAmount)
