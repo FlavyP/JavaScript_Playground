@@ -66,3 +66,7 @@ animal.printSound()
 var dog = new Dog('german shepard');
 dog.printSound()
 dog.printBreed()
+
+var dogSound = Dog.prototype.printSound.bind({sound:'roar'})
+dogSound()
+dog.printSound()
