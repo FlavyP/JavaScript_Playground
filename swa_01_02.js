@@ -1,0 +1,16 @@
+console.log("Which of the following are truthy?");
+console.log('2 + 2 === 4 ' + (2 + 2 === 4));
+console.log("2 + 2 === '4' " + (2 + 2 === '4'));
+console.log("2 + 2 == '4' " + (2 + 2 == '4'));
+console.log("Number('4') " + (Number('4') == true));
+console.log("Number('0') " + (Number('0') == true));
+console.log("NaN " + (NaN == true));
+console.log("NaN != NaN " + (NaN != NaN));
+console.log("Infinity == Infinity " + (Infinity == Infinity));
+console.log("1/0 == 2/0 " + (1/0 == 2/0));
+console.log("2 * null " + (2 * null));
+console.log("2 + null " + (2 + null));
+console.log("7 " + ("7" == true));
+console.log("null || 7 " + ((null || 7)==true));
+console.log('4 ' + ('4' == true));
+console.log("''" + ('' == true));

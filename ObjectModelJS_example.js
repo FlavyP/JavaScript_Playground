@@ -25,6 +25,10 @@ function Employee() {
   this.dept = 'general'
 }
 
+Employee.prototype.greeting = function() {
+  console.log('Hi! I\'m ' + this.name + '.');
+};
+
 function Manager() {
   Employee.call(this)
   this.reports = []
@@ -36,6 +40,11 @@ emp.name = 'Mike'
 var manager = new Manager()
 manager.name = 'Johnny'
 console.log(emp)
+console.log(manager)
+emp.greeting()
+manager.greeting()
+
+Manager.prototype.constructor = Manager;
 console.log(manager)
 
 console.log("-----------------------------")
@@ -70,3 +79,10 @@ dog.printBreed()
 var dogSound = Dog.prototype.printSound.bind({sound:'roar'})
 dogSound()
 dog.printSound()
+
+//private members
+function Person(name){
+   this.getName = function() {
+      return name
+   }
+}
